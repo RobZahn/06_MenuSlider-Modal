@@ -1,5 +1,5 @@
 $font-stack: 'Lato', sans-serif;
-$modal-duration: 1s;
+$modal-duration: 0.5s;
 $color-primary: #30336b;
 $color-secondary: #be2edd;
 
@@ -140,6 +140,10 @@ body {
     right: 0px;
     bottom: 0px;
 
+    &.show-modal {
+      display: block;
+    }
+
     .modal {
       background-color: #fff;
       border-radius: 5px;
@@ -152,6 +156,8 @@ body {
       transform: translate(-50%, -50%);
       max-width: 100%;
       width: 400px;
+      animation-name: modalopen;
+      animation-duration: $modal-duration;
 
       .close-btn {
         background: transparent;
@@ -192,5 +198,15 @@ body {
         }
       }
     }
+  }
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
