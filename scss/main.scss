@@ -10,6 +10,7 @@ $color-secondary: #be2edd;
 body {
   font-family: $font-stack;
   margin: 0;
+  overflow: hidden;
 
   button,
   input[type='submit'] {
@@ -109,6 +110,81 @@ body {
       font-size: 20px;
       box-shadow: 0.5px 1px 10px rgba(0, 0, 0, 0.5),
         -0.5px -1px 10px rgba(51, 51, 51, 0.5);
+    }
+  }
+
+  .container {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 800px;
+    line-height: 1.5rem;
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .modal-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    .modal {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0.5px 1px 10px rgba(0, 0, 0, 0.5),
+        -0.5px -1px 10px rgba(0, 0, 0, 0.5);
+      position: absolute;
+      overflow: hidden;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      width: 400px;
+
+      .close-btn {
+        background: transparent;
+        font-size: 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+      .modal-header {
+        background-color: $color-primary;
+        color: #fff;
+        padding: 15px;
+
+        h3 {
+          margin: 0;
+          border-bottom: 1px solid #333;
+        }
+      }
+
+      .modal-content {
+        padding: 20px;
+
+        .modal-form {
+          div {
+            margin: 15px;
+          }
+
+          label {
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          .form-input {
+            padding: 8px;
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }
