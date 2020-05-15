@@ -10,6 +10,7 @@ $color-secondary: #be2edd;
 body {
   font-family: $font-stack;
   margin: 0;
+  transition: transform 0.3s ease-in-out;
   overflow: hidden;
 
   button,
@@ -24,6 +25,11 @@ body {
     &:focus {
       outline: none;
     }
+  }
+
+  &.show-nav {
+    // Width of Nav
+    transform: translateX(200px);
   }
 
   nav {
