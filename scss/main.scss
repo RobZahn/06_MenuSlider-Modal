@@ -11,6 +11,20 @@ body {
   font-family: $font-stack;
   margin: 0;
 
+  button,
+  input[type='submit'] {
+    background-color: $color-secondary;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 12px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
   nav {
     background-color: $color-primary;
     border-right: 2px solid rgba(200, 200, 200, 0.1);
@@ -64,6 +78,37 @@ body {
           }
         }
       }
+    }
+  }
+
+  header {
+    background-color: $color-primary;
+    color: #fff;
+    font-size: 130%;
+    position: relative;
+    padding: 40px 15px;
+    text-align: center;
+
+    h1 {
+      margin: 0;
+    }
+
+    p {
+      margin: 30px 0;
+    }
+
+    .toggle {
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .cta-btn {
+      padding: 12px 30px;
+      font-size: 20px;
+      box-shadow: 0.5px 1px 10px rgba(0, 0, 0, 0.5),
+        -0.5px -1px 10px rgba(51, 51, 51, 0.5);
     }
   }
 }
